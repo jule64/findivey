@@ -46,3 +46,7 @@ If you would like to contribute please fork this project!
 
 
 
+![screenshot](https://raw.github.com/jule64/findivey/master/img/screenshot1.tiff)
+
+
+
