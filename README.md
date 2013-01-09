@@ -6,9 +6,9 @@ findivey is a small Python utility that alerts you when your favorite high stake
 
 How frustrating is it to miss an appearance of Tom Dwan ("durrr") or Phil Ivey ("Polarizing") or the prodigy Isildur1 only because you forgot to check the high stakes tables of FullTilt and PokerStars that evening?
 
-With findivey, just save a player's details in a text file (examples are provided) and the program alert you as soon as the player is online! 
+With findivey, just save a player's details in a text file (examples are provided) and the program alerts you as soon as the player is online! 
 
-findivey works by scanning (every ten minutes) the "online" status of a player as displayed on the player's profile on highstakesdb.com.  Once the player shows up, findivey will alerts you by printing on the command line the player's name and where he is currently playing (FullTilt or PokerStars).
+findivey works by scanning (every ten minutes) the "online" status of a player as displayed on the player's profile on highstakesdb.com.  Once the player shows up, findivey will print on the command line the player's name and where he is currently playing (FullTilt or PokerStars).
 
 With findivey never miss the big action again !!
 
