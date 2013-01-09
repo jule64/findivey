@@ -24,7 +24,7 @@ OR
 
 add this line to your .bash/.zsh profile file
 
-        findivey () { python yourpath/findivey }
+	findivey () { python yourpath/findivey }
 
 and just type "findivey" in your command line to run it
 
@@ -33,10 +33,11 @@ Dependencies:
 
 Possible library dependencies include:
 
-        BeautifulSoup ("pip install BeautifulSoup" in your command line to install (unix))
+	BeautifulSoup ("pip install BeautifulSoup" in your command line to install (unix))
 
 
 Next steps:
+
     - play sound when specific player enters online. For example by recording the name of the player and playing that name back when the player is online.
     - add time scan interval option (currently scan every ten minutes)
 
