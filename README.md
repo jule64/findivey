@@ -41,4 +41,8 @@ Next steps:
     - play sound when specific player enters online. For example by recording the name of the player and playing that name back when the player is online.
     - add time scan interval option (currently scan every ten minutes)
 
-If you like this project please fork it!
+
+If you would like to contribute please fork this project!
+
+
+

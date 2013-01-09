@@ -33,6 +33,10 @@ class FindIvey():
         livb112|livb112|Olivier Busquet|FTP|0
                 
         '''
+        
+        self.pokerrooms = { "FTP":"FullTilt", "PKSTARS":"PokerStars" }
+        
+        
 
         
     def _getPlayers(self):
@@ -75,7 +79,7 @@ class FindIvey():
         
         
         while True:
-            print "\n.. checking players\n"
+            print "\n... checking who is online ..\n"
             isempty = True
             for playerinfo in self._getPlayers().values():
                 
@@ -90,9 +94,9 @@ class FindIvey():
                     if(onlineinfo.pop().find_next(text=True)):
                         isempty = False
                         if(playerinfo[4]=="1"):
-                            print playerinfo[1] + " ( " + playerinfo[2] + " )" + " is online"
+                            print playerinfo[1] + " ( " + playerinfo[2] + " )" + " is online on "+ self.pokerrooms[playerinfo[3]]
                         else:
-                            print playerinfo[1] + " is online"
+                            print playerinfo[1] + " is online on "+ self.pokerrooms[playerinfo[3]]
             if(isempty==True):
                 print "no one is online"
     
@@ -107,7 +111,7 @@ class FindIvey():
                 if(timeleftinmin*2<=timeleftinmin_prev or timeleftinmin_prev == timeleftinmin):
                     timeleftinmin_prev=timeleftinmin
                     print ".. checking again in " + str(int(timeleftinmin)) + " min"
-                time.sleep(10)
+                time.sleep(60)
                 timeleftinmin = timeleftinmin - 1
                 if (timeleftinmin <= 0):
                     recheck = True
@@ -116,7 +120,7 @@ class FindIvey():
 
 if __name__ == '__main__':
     
-    print "\n.. findivey"
+    print "\n.. starting findivey"
     FindIvey().scanPlayers()
     
     
