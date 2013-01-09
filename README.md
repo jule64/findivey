@@ -32,6 +32,7 @@ and just type "findivey" in your command line to run it
 Dependencies:
 
 Possible library dependencies include:
+
         BeautifulSoup ("pip install BeautifulSoup" in your command line to install (unix))
 
 
