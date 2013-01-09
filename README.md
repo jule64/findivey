@@ -42,11 +42,12 @@ Next steps:
     - add time scan interval option (currently scan every ten minutes)
 
 
-If you would like to contribute please fork this project!
-
-
+Here is a little screenshot:
 
 ![screenshot](https://raw.github.com/jule64/findivey/master/img/screenshot1.png)
 
+
+
+If you would like to contribute please fork this project!
 
 
