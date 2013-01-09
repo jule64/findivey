@@ -6,12 +6,9 @@ Created on Jan 7, 2013
 
 
 
-import datetime
 from bs4 import BeautifulSoup
 import urllib2
 import lxml
-import sys, traceback
-import re
 import posixfile
 import time
 
