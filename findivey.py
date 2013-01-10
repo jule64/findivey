@@ -94,7 +94,7 @@ class FindIvey():
                     if(onlineinfo.pop().find_next(text=True)):
                         isempty = False
                         if(playerinfo[4]=="1"):
-                            print playerinfo[1] + " ( " + playerinfo[2] + " )" + " is online on "+ self.pokerrooms[playerinfo[3]]
+                            print playerinfo[1] + " (" + playerinfo[2] + ")" + " is online on "+ self.pokerrooms[playerinfo[3]]
                         else:
                             print playerinfo[1] + " is online on "+ self.pokerrooms[playerinfo[3]]
             if(isempty==True):
