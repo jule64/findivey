@@ -1,7 +1,7 @@
 findivey
 ========
 
-A small Python utility that informs you when your favorite high stakes poker players are playing online.
+A small Python utility that informs you when your favorite high stakes poker players are playing online. NOW INCLUDES GROWLS NOTIFICATIONS! (check screenshot below)
 
 
 How frustrating is it to miss an appearance of Tom "durrr" Dwan or Viktor "Isildur1" Blom, two of the most exciting players in the game, only because you forgot to log in to your poker software that evening?
@@ -36,6 +36,7 @@ Possible library dependencies include:
 
 	BeautifulSoup ("pip install BeautifulSoup" in your command line to install (unix))
 
+	Note: this project includes netgrowl.py which it uses to send update notifications to growl.  This library was developed by @timc3 (Tim Child, https://github.com/timc3), full credit to him.
 
 Next steps:
 
@@ -43,8 +44,12 @@ Next steps:
     - add time scan interval option (currently scan every ten minutes)
 
 
-Here is a little screenshot:
+Some screenshots:
 
+Growl-enabled notifications:
+![screenshot](https://raw.github.com/jule64/findivey/master/img/growl1.png)
+
+Terminal notifications
 ![screenshot](https://raw.github.com/jule64/findivey/master/img/screenshot1.png)
 
 

@@ -12,6 +12,10 @@ import lxml
 import posixfile
 import time
 
+import sys
+#sys.path.append( "../netgrowl/" )
+import netgrowl
+
 
 
 class FindIvey():
@@ -21,7 +25,7 @@ class FindIvey():
         self.playersinfo='''
         web key link | Online user name | Real Name (if known) | Poker Site | Display Full Name (1=True)
         Polarizing|Polarizing|Phil Ivey|FTP|1
-        Alexonmoon|Alexonmoon|Alex Luneau|FTP|0
+        Alexonmoon|Alexonmoon|Alex Luneau|FTP|1
         Gus-Hansen|Gus Hansen|Gus Hansen|FTP|0
         durrrr|durrrr|Tom Dwan|FTP|0
         Isildur1|Isildur1|Viktor Blom|FTP|0
@@ -30,7 +34,7 @@ class FindIvey():
         OMGClayAiken|OMGClayAiken|Phil Galfond|FTP|1
         jungleman12|jungleman12|Dan Cates|FTP|1
         KidPoker|KidPoker|Daniel Negreanu|PKSTARS|0
-        livb112|livb112|Olivier Busquet|FTP|0
+        livb112|livb112|Olivier Busquet|FTP|1
                 
         '''
         
@@ -87,18 +91,28 @@ class FindIvey():
                     soup = BeautifulSoup(self._getPage(playerinfo[0],playerinfo[3]),"xml")
                 except:
                     raise Exception, "No data available on url linked to " + playerinfo[0]
-    
-    
+
+                
                 onlineinfo = soup.find_all("span","greent")
                 if(len(onlineinfo)>0):
                     if(onlineinfo.pop().find_next(text=True)):
                         isempty = False
                         if(playerinfo[4]=="1"):
-                            print playerinfo[1] + " (" + playerinfo[2] + ")" + " is online on "+ self.pokerrooms[playerinfo[3]]
+                            growltle = playerinfo[1] + " (" + playerinfo[2] + ")"
+                            growlmsg =  " is online on "+ self.pokerrooms[playerinfo[3]]
+                            print growltle + growlmsg
                         else:
-                            print playerinfo[1] + " is online on "+ self.pokerrooms[playerinfo[3]]
+                            growltle = playerinfo[1]
+                            growlmsg =  " is online on "+ self.pokerrooms[playerinfo[3]]
+                            print growltle + growlmsg
+                        argv = ['-t', growltle, '-d', growlmsg, '-x', '']
+                        netgrowl.main(argv)
+                            
             if(isempty==True):
-                print "no one is online"
+                growltle = "no one is online"
+                print growltle
+                argv = ['-t', growltle, '-d', '', '-x', '']
+                netgrowl.main(argv)
     
             # check again in five minutes
 
@@ -122,6 +136,8 @@ if __name__ == '__main__':
     
     print "\n.. starting findivey"
     FindIvey().scanPlayers()
+    
+    
     
     
     
