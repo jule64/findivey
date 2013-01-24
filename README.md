@@ -1,4 +1,4 @@
-findivey (http://jule64.github.com/findivey/)
+findivey 
 ========
 
 A small Python utility that informs you when your favorite high stakes poker players are playing online. NOW INCLUDES GROWLS NOTIFICATIONS! (check screenshot below)
@@ -58,4 +58,4 @@ Terminal notifications
 
 If you would like to contribute please fork this project!
 
-
+View the official project web page here: http://jule64.github.com/findivey/
