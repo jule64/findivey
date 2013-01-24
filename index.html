@@ -1,94 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Findivey by jule64</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <body>
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Findivey</title>
+  <meta name="description" content="findivey alerts you when your favorite high stakes poker players are playing online.  Don't miss the big action anymore!">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Findivey</h1>
+    </header>
     <div id="container">
-      <div class="inner">
+      <p class="tagline">findivey alerts you when your favorite high stakes poker players are playing online.  Don't miss the big action anymore!</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/jule64/findivey/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/jule64/findivey/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/jule64/findivey" class="code">View Findivey on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>findivey </h1>
 
-        <header>
-          <h1>Findivey</h1>
-          <h2>findivey alerts you when your favorite high stakes poker players are playing online.  Don't miss the big action anymore!</h2>
-        </header>
+<p>A small Python utility that informs you when your favorite high stakes poker players are playing online. </p>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/jule64/findivey/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/jule64/findivey/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/jule64/findivey" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+<p><strong>Now includes notifications directly on your screen (see screenshot below)!</strong>* </p>
 
-        <hr>
+<h2>A short intro</h2>
 
-        <section id="main_content">
-          <h1>findivey</h1>
+<p>How frustrating is it to miss an appearance of Tom "durrr" Dwan or Viktor "Isildur1" Blom, two of the most exciting players in the game, only because you forgot to log in to your poker software that evening?</p>
 
-<p>findivey is a small Python utility that alerts you when your favorite high stakes poker players are playing online.</p>
+<p>With findivey, just save your favorite player's details in a text file (well actually in the script itself in the current version) and the program alerts you as soon as the player appears on the poker tables!</p>
 
-<p>How frustrating is it to miss an appearance of Tom Dwan ("durrr") or Phil Ivey ("Polarizing") or the prodigy Isildur1 only because you forgot to check the high stakes tables of FullTilt and PokerStars that evening?</p>
+<p>findivey works by scanning every ten minutes a player's online status as displayed on the player's profile on highstakesdb.com.  Once the player shows up findivey prints to the command line the player's name and where he is currently playing (see screenshot at the bottom for an example).</p>
 
-<p>With findivey, just save a player's details in a text file (examples are provided) and the program alerts you as soon as the player is online! </p>
+<p><strong>With findivey never miss the big poker action again !!</strong></p>
 
-<p>findivey works by scanning (every ten minutes) the "online" status of a player as displayed on the player's profile on highstakesdb.com.  Once the player shows up, findivey will print on the command line the player's name and where he is currently playing (FullTilt or PokerStars).</p>
+<h2>Installation guidelines</h2>
 
-<p>With findivey never miss the big action again !!</p>
-
-<p>To Download the program:</p>
+<p>Command line:</p>
 
 <pre><code>git clone git@github.com:jule64/findivey.git
 </code></pre>
 
 <p>To run the program:</p>
 
-<pre><code>python yourpath/findivey.py
+<pre><code>python your/path/to/findivey/findivey.py
 </code></pre>
 
-<p>OR</p>
+<p>or just add this line to your .bash/.zsh profile file</p>
 
-<p>add this line to your .bash/.zsh profile file</p>
-
-<pre><code>findivey () { python yourpath/findivey }
+<pre><code>findivey () { your/path/to/findivey/findivey.py }
 </code></pre>
 
 <p>and just type "findivey" in your command line to run it</p>
 
-<p>Dependencies:</p>
+<h2>Dependencies</h2>
 
-<p>Possible library dependencies include:</p>
+<ul>
+<li>BeautifulSoup: to install type "pip install BeautifulSoup" in your command line</li>
+</ul><p>Note: this project includes <a href="https://github.com/timc3/netgrowl">netgrowl.py</a> which it uses to send update notifications to growl.  This library was developed by Tim Child (<a href="https://github.com/timc3">@timc3</a>), full credit to him.</p>
 
-<pre><code>BeautifulSoup ("pip install BeautifulSoup" in your command line to install (unix))
-</code></pre>
+<h2>Next steps</h2>
 
-<p>Next steps:</p>
+<ul>
+<li>play sound when a player enters online. For example by recording the name of the player and playing that name back when the player is online.</li>
+<li>add time scan interval option (currently scan every ten minutes)</li>
+</ul><h2>Some screenshots</h2>
 
-<pre><code>- play sound when specific player enters online. For example by recording the name of the player and playing that name back when the player is online.
-- add time scan interval option (currently scan every ten minutes)
-</code></pre>
+<p><strong>Growl-enabled notifications</strong></p>
 
-<p>Here is a little screenshot:</p>
+<p><img src="https://raw.github.com/jule64/findivey/master/img/growl1.png" alt="screenshot"></p>
+
+<p><strong>Terminal notifications</strong></p>
 
 <p><img src="https://raw.github.com/jule64/findivey/master/img/screenshot1.png" alt="screenshot"></p>
 
 <p>If you would like to contribute please fork this project!</p>
-        </section>
 
-        <footer>
-          Findivey is maintained by <a href="https://github.com/jule64">jule64</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+<p>Check the official project page <a href="http://jule64.github.com/findivey/">here</a></p>
 
-        
+<p>* This feature needs Growl notifications installed</p>
+        </article>
       </div>
     </div>
-  </body>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/jule64" class="avatar"><img src="https://secure.gravatar.com/avatar/3538b721d457e59f507f067ae0ed2c7e?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/jule64">jule64</a> maintains <a href="https://github.com/jule64/findivey">Findivey</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/jule64/findivey/tarball/master" class="tar">tar</a><a href="https://github.com/jule64/findivey/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+  
+</body>
 </html>
