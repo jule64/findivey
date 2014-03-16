@@ -35,6 +35,7 @@ class FindIvey():
         jungleman12|jungleman12|Dan Cates|FTP|1
         KidPoker|KidPoker|Daniel Negreanu|PKSTARS|0
         livb112|livb112|Olivier Busquet|FTP|1
+        Ziigmund|Ziigmund|Ilari Sahamies|FTP|1
                 
         '''
         
